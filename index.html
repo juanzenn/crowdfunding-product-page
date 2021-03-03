@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- displays site properly based on user's device -->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+  <link href="https://fonts.googleapis.com/css2?family=Commissioner:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="main.css">
+
+
+
+  <title>Frontend Mentor | Crowdfunding product page</title>
+</head>
+
+<body class="font-commissioner">
+  <!-- Header component with images and responsive navbar -->
+  <header class="shadow-custom">
+    <img class="hidden md:block absolute -z-10" src="./images/image-hero-desktop.jpg" alt="Header image">
+    <img class="md:hidden absolute -z-10" src="./images/image-hero-mobile.jpg" alt="">
+
+    <nav class="container flex flex-wrap justify-between items-center mx-auto p-4">
+      <h3 class="font-commissioner font-bold text-3xl text-white">crowdfund</h3>
+      <button id="hamburger" class="focus:outline-none">
+        <img class="lg:hidden toggle" src="./images/icon-hamburger.svg" alt="">
+        <img class="hidden toggle" src="./images/icon-close-menu.svg" alt="">
+      </button>
+      <div
+        class="toggle hidden lg:block absolute lg:relative left-1/2 lg:left-auto transform -translate-x-1/2 lg:transform-none w-11/12 top-14 lg:top-auto lg:w-auto text-center font-bold mt-5 md:mt-0 bg-white lg:bg-transparent rounded-lg shadow-2xl lg:shadow-none">
+        <a href="#"
+          class="block w-full lg:w-auto md:inline-block p-2 lg:pt-4 font-commissioner lg:text-white hover:text-cyan-dark lg:hover:text-cyan">
+          About
+        </a>
+        <a href="#"
+          class="block w-full lg:w-auto md:inline-block p-2 lg:pt-4 font-commissioner lg:text-white hover:text-cyan-dark lg:hover:text-cyan">
+          Discover
+        </a>
+        <a href="#"
+          class="block w-full lg:w-auto md:inline-block p-2 lg:pt-4 font-commissioner lg:text-white hover:text-cyan-dark lg:hover:text-cyan">
+          Get Started
+        </a>
+      </div>
+    </nav>
+  </header>
+  <!-- First section -->
+  <section
+    class="container w-4/5 lg:w-1/2 mt-52 md:mt-60 lg:mt-60 mx-auto bg-white shadow-md flex flex-col items-center justify-center rounded-xl border border-gray-300">
+    <img class="transform -translate-y-6" src="./images/logo-mastercraft.svg" alt="">
+
+    <div class="w-full text-center p-4" id="title">
+      <div>
+        <h1 class="main-title">Mastercraft Bamboo Monitor Riser</h1>
+        <p class="paragraph mb-6">A beautiful & handcrafted monitor stand to reduce neck and eye
+          strain.</p>
+      </div>
+      <div id="call-to-action" class="grid grid-cols-2 items-center">
+        <button class="justify-self-center my-4 btn w-full py-2 px-2 hover:shadow-md">Back
+          this project</button>
+        <button id="bookmark" class="justify-center w-3/5 justify-self-center my-4 focus:outline-none">
+          <!-- Off bookmark -->
+          <div class="toggle2 w-full flex justify-center">
+            <img class="block lg:absolute lg:transform lg:-translate-x-20" src="./images/icon-bookmark.svg" alt="">
+            <span
+              class="hidden lg:block bg-gray-200 py-4 px-2 rounded-full w-full text-gray-500 font-bold">Bookmark</span>
+          </div>
+          <!-- On bookmark -->
+          <div class="hidden toggle2 w-full flex justify-center">
+            <img class="block lg:absolute lg:transform lg:translate-x-20" src="./images/icon-check.svg" alt=""
+              width="56px" height="56px">
+            <span
+              class="hidden lg:block bg-gray-200 py-4 px-2 rounded-full w-full text-cyan-dark font-bold">Bookmark</span>
+          </div>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <section class="container w-4/5 lg:w-1/2 mt-10 mx-auto bg-white shadow-md rounded-xl border border-gray-300 px-4 py-10">
+    <!-- Information -->
+    <div class="space-y-10 md:space-y-0 flex flex-col items-center md:grid md:grid-cols-3 justify-self-center">
+      <div class="text-center  md:text-left justify-self-center">
+        <h3 class="font-bold text-3xl">$89,914</h3>
+        <p class="paragraph">off $100,000 backed</p>
+        <div class="border-t mt-4 border-gray-300 w-56 md:hidden"></div>
+      </div>
+      <div class="text-center md:text-left justify-self-center">
+        <h3 class="font-bold text-3xl">5,007</h3>
+        <p class="paragraph">total backers</p>
+        <div class="border-t mt-4 border-gray-300 w-56  md:hidden"></div>
+      </div>
+      <div class="text-center md:text-left justify-self-center">
+        <h3 class="font-bold text-3xl">56</h3>
+        <p class="paragraph">days left</p>
+      </div>
+    </div>
+    <!-- Progress bar -->
+    <div class="w-full h-3 mt-10 bg-gray-300 rounded-md">
+      <div class="w-3/4 h-3 bg-cyan rounded-md"></div>
+    </div>
+  </section>
+  <!-- About section -->
+  <section class="container w-4/5 lg:w-1/2 mt-10 mx-auto bg-white shadow-md rounded-xl border border-gray-300 px-4 py-6 mb-24">
+    <h2 class="font-bold text-lg mb-7">About this project</h2>
+    <p class="paragraph leading-4 mb-6">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that elevates your screen 
+      to a more comfortable viewing height. Placing your monitor at eye level has the potential to improve 
+      your posture and make you more comfortable while at work, helping you stay focused on the task at hand.</p>
+    <p class="paragraph leading-4 mb-6">Featuring artisan craftsmanship, the simplicity of design creates extra desk space below your computer 
+      to allow notepads, pens, and USB sticks to be stored under the stand.</p>
+      <!-- Card section -->
+      <div class="space-y-6">
+        <div class="w-full border border-gray-300 rounded-xl p-6 space-y-6">
+          <div id="card-title" class="lg:flex lg:justify-between">
+            <h3 class="font-bold text-lg">Bamboo Stand</h3>
+            <span class="text-cyan font-medium">Pledge $25 or more</span>
+          </div>        
+          <p class="paragraph leading-5">You get an ergonomic stand made of natural bamboo. You've helped us launch our promotional campaign, and 
+            you’ll be added to a special Backer member list.</p>
+          <div class="lg:flex lg:justify-between">
+            <p class="paragraph mb-6 lg:mb-0"><span class="font-bold text-3xl text-black">101</span> left</p>
+            <button class="btn py-2 px-4 hover:shadow-md">Select Reward</button>
+          </div>
+        </div>
+        <div class="w-full border border-gray-300 rounded-xl p-6 space-y-6">
+          <div id="card-title" class="lg:flex lg:justify-between">
+            <h3 class="font-bold text-lg">Black Edition Stand</h3>
+            <span class="text-cyan font-medium">Pledge $75 or more</span>
+          </div>        
+          <p class="paragraph leading-5">You get a Black Special Edition computer stand and a personal thank you. You’ll be added to our Backer 
+            member list. Shipping is included.</p>
+          <div class="lg:flex lg:justify-between">
+            <p class="paragraph mb-6 lg:mb-0"><span class="font-bold text-3xl text-black">64</span> left</p>
+            <button class="btn py-2 px-4 hover:shadow-md">Select Reward</button>
+          </div>
+        </div>
+        <div class="w-full border border-gray-300 rounded-xl p-6 space-y-6">
+          <div id="card-title" class="lg:flex lg:justify-between">
+            <h3 class="font-bold text-lg">Mahogany Special Edition</h3>
+            <span class="text-cyan font-medium">Pledge $200 or more</span>
+          </div>        
+          <p class="paragraph leading-5">You get two Special Edition Mahogany stands, a Backer T-Shirt, and a personal thank you. You’ll be added 
+            to our Backer member list. Shipping is included.</p>
+          <div class="lg:flex lg:justify-between">
+            <p class="paragraph mb-6 lg:mb-0"><span class="font-bold text-3xl text-black">0</span> left</p>
+            <button class="py-2 px-4 bg-gray-300 text-white rounded-full text-base md:text-lg font-bold" disabled>Out of Stock</button>
+          </div>
+        </div>
+      </div>      
+  </section>
+
+
+  <script src="main.js"></script>
+</body>
+
+</html>
