@@ -106,7 +106,7 @@
     </div>
   </section>
   <!-- About section -->
-  <section
+  <section id="about"
     class="container w-4/5 lg:w-1/2 mt-10 mx-auto bg-white shadow-md rounded-xl border border-gray-300 px-4 py-6 mb-24">
     <h2 class="font-bold text-lg mb-7">About this project</h2>
     <p class="paragraph leading-4 mb-6">The Mastercraft Bamboo Monitor Riser is a sturdy and stylish platform that
@@ -163,13 +163,13 @@
 
   <!-- Modal -->
   <div id="modal" class="w-full h-full mx-auto p-4 z-50 absolute hidden">
-    <div class="container w-4/5 lg:w-1/2 mx-auto flex flex-col items-center bg-white rounded-2xl shadow-2xl p-6">
+    <div class="container w-4/5 lg:w-1/2 mx-auto flex flex-col items-center bg-white rounded-2xl shadow-2xl p-6 default">
       <!-- Close icon -->
       <div id="close-modal" class="w-full flex justify-end">
         <img src="/images/icon-close-modal.svg" alt="close modal" class="cursor-pointer ">
       </div>
       <!-- Heading of the modal -->
-      <div class="my-4">
+      <div class="my-4 modal-heading">
         <h2 class="text-2xl font-bold">Back this project</h2>
         <p class="paragraph">Want to support us in bringing Mastercraft Bamboo Monitor Riser out in the world?</p>
       </div>
@@ -206,10 +206,10 @@
         <hr class="my-4">
         <div class="my-2 text-black md:flex md:justify-between md:items-center">
           <p class="text-center paragraph">Enter your pledge</p>
-          <form action="#" class="flex w-full space-x-4 mt-4 md:w-1/2">
+          <form class="flex w-full space-x-4 mt-4 md:w-1/2">
             <input type="number" min="1" name="quantity"
               class="w-1/2 rounded-full border-gray-300 focus:border-gray-500">
-            <button type="submit" class="btn p-3">Continue</button>
+            <button type="button" class="btn p-3 submit-test">Continue</button>
           </form>
         </div>
       </div>
@@ -267,10 +267,10 @@
         <hr class="my-4">
         <div class="my-2 text-black md:flex md:justify-between md:items-center">
           <p class="text-center paragraph">Enter your pledge</p>
-          <form action="#" class="flex w-full space-x-4 mt-4 md:w-1/2">
+          <form class="flex w-full space-x-4 mt-4 md:w-1/2">
             <input type="number" min="1" name="quantity"
               class="w-1/2 rounded-full border-gray-300 focus:border-gray-500">
-            <button type="submit" class="btn p-3">Continue</button>
+            <button type="button" class="btn p-3 submit-test">Continue</button>
           </form>
         </div>
       </div>
@@ -329,13 +329,13 @@
           <form action="#" class="flex w-full space-x-4 mt-4 md:w-1/2">
             <input type="number" min="1" name="quantity"
               class="w-1/2 rounded-full border-gray-300 focus:border-gray-500">
-            <button type="submit" class="btn p-3">Continue</button>
+            <button type="button" class="btn p-3 submit-test">Continue</button>
           </form>
         </div>
       </div>
 
       <!-- Fourth section - Mahogany Special Edition -->
-      <div id="mahogany" class="w-full p-6 border border-gray-300 rounded-xl my-4 cursor-pointer">
+      <div class="w-full p-6 border border-gray-300 rounded-xl my-4 cursor-pointer mahogany">
         <div class="form-control flex items-center justify-between mb-4">
           <div class="flex items-center">
             <svg height="24" width="24" class="mr-2">
@@ -362,6 +362,17 @@
         </div>
       </div>
 
+      <!-- Success window -->
+      <div id="success" class="hidden">
+        <div class="w-full p-6 flex flex-col items-center space-y-6">
+          <img src="/images/icon-check.svg" class="w-24" alt="Checkmark">
+          <div class="text-center">
+            <h2>Thanks for your support!</h2>
+            <p class="paragraph">Your pledge brings us one step closer to sharing Mastercraft Bamboo Monitor Riser worldwide. You will get an email once our campaign is completed.</p>
+          </div>
+          <button id="last-btn" class="btn px-4 py-2">Got it!</button>
+        </div>  
+      </div>
     </div>
   </div>
 

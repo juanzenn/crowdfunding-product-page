@@ -59,3 +59,29 @@ bambooBtn.click(function() {
   $("#backdrop").show()
   $('.bamboo-stand').toggle()
 })
+
+// Submit form
+let btnForm = $('.submit-test')
+btnForm.click(function() {
+  let successModal = $('#success')
+  successModal.show(600)
+  $('.no-reward').hide(300)
+  $('.bamboo-stand').hide(300)
+  $('.black-stand').hide(300)
+  $('.mahogany').hide(300)
+  $('.modal-heading').hide(300)
+  $('#close-modal').hide(300)
+  $("#backdrop").show()
+})
+
+let lastBtn = $('#last-btn')
+lastBtn.click(function() {
+  $('.non-selected').show()
+  $('.selected').hide()
+  $('.modal-heading').show()
+  $("#backdrop").hide()
+  $("#modal").hide()
+})
+
+
+
