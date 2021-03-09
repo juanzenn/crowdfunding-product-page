@@ -1,43 +1,61 @@
-document.getElementById("hamburger").onclick = function toggleMenu() {
-  const navToggle = document.getElementsByClassName("toggle");
-  for (let i = 0; i < navToggle.length; i++) {
-    navToggle.item(i).classList.toggle("hidden");
-  }
-};
+// Menu on mobile show/hide
+$("#hamburger").click(function(){
+  if ($("#navbar").is(":visible")) {
+    $("#navbar").hide('slow')
+  } else {
+    $("#navbar").show(400)
+  }  
+  $(".toggle-nav").toggle() 
+})
 
-document.getElementById("bookmark").onclick = function toggleMenu() {
-  const navToggle = document.getElementsByClassName("toggle2");
-  for (let i = 0; i < navToggle.length; i++) {
-    navToggle.item(i).classList.toggle("hidden");
-  }
-};
+// Bookmarked
+$("#bookmark").click(function() {
+ $('.toggle-bookmark').toggle()
+})
 
-// Time to code the modal!! 
-let open1 = document.getElementById('open1')
-let open2 = document.getElementById('open2')
-const modal = document.getElementById('modal')
-const backdrop = document.getElementById('backdrop')
-let close = document.getElementById('close-modal')
+// Modal
+$("#default-modal").click(function() {
+  $("#modal").show(500);
+  $("#backdrop").show();
+})
+$("#close-modal").click(function() {
+  $("#modal").hide(500)
+  $("#backdrop").hide()
+  $('.non-selected').show()
+  $('.selected').hide()
+})
 
-function closeModal() {
-  modal.style.display = "none"
-  backdrop.style.display = "none"
-}
+// Modal states
+// no-reward
+$('.no-reward').click(function() {
+  $('.non-selected').show()
+  $('.selected').hide()
+  $('.no-reward').toggle()
+})
+// bamboo-stand
+$('.bamboo-stand').click(function() {
+  $('.non-selected').show()
+  $('.selected').hide()  
+  $('.bamboo-stand').toggle()
+})
+// black-stand
+$('.black-stand').click(function() {
+  $('.non-selected').show()
+  $('.selected').hide()  
+  $('.black-stand').toggle()
+})
 
-function openModal() {
-  modal.style.display = "block";
-  backdrop.style.display = "block";
-}
-
-// Setup the open modal functions
-open1.onclick = function() {
-  openModal()
-};
-
-open2.onclick = function() {
-  openModal()
-};
-
-close.onclick = function() {
-  closeModal()
-}
+// Information section buttons
+// for the black-edition
+$('#black-edition-btn').click(function() {
+  $("#modal").show(500)
+  $("#backdrop").show()
+  $('.black-stand').toggle()
+})
+// for the bamboo-stand
+let bambooBtn = $('#bamboo-stand-btn')
+bambooBtn.click(function() {
+  $("#modal").show(500)
+  $("#backdrop").show()
+  $('.bamboo-stand').toggle()
+})
