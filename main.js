@@ -82,6 +82,7 @@ lastBtn.click(function() {
   $("#backdrop").hide()
   $("#modal").hide()
   $('#close-modal').show()
+  $('.mahogany').show()
   $('#success').hide()
 })
 
