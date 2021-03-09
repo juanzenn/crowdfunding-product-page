@@ -63,7 +63,7 @@ bambooBtn.click(function() {
 // Submit form
 let btnForm = $('.submit-test')
 btnForm.click(function() {
-  let successModal = $('#success')
+  const successModal = $('#success')
   successModal.show(600)
   $('.no-reward').hide(300)
   $('.bamboo-stand').hide(300)
@@ -81,6 +81,8 @@ lastBtn.click(function() {
   $('.modal-heading').show()
   $("#backdrop").hide()
   $("#modal").hide()
+  $('#close-modal').show()
+  successModal.hide()
 })
 
 
